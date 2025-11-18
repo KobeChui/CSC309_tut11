@@ -10,7 +10,7 @@ const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 const app = express();
 
 // TODO: complete me (CORS)
-app.use(cors(FRONTEND_URL));
+app.use(cors({ origin: FRONTEND_URL, credentials: true }));
 app.use(express.json());
 app.use('', routes);
 
